@@ -9,14 +9,8 @@ Este repositorio explora el uso de closures en React y cómo pueden ser útiles 
 Ejemplo
 En el siguiente ejemplo, se crea una función que toma un valor como argumento y devuelve una nueva función que utiliza ese valor en su cuerpo:
 
-function createAdder(num) {
-  return function(value) {
-    return num + value;
-  };
-}
-
-const addFive = createAdder(5);
-console.log(addFive(3)); // Devuelve 8
+ 
+//ejemplo.js
 
 
 En este caso, la función createAdder es un closure, ya que utiliza el valor num en su cuerpo y devuelve una nueva función que también utiliza ese valor. Al llamar a createAdder(5), se crea una nueva función que siempre sumará 5 al valor que se le pase como argumento.
@@ -25,21 +19,8 @@ En React, se pueden utilizar closures de manera similar para encapsular valores 
 
 Por ejemplo, en el siguiente componente, se utiliza un closure para capturar el valor de id y cash y crear una función handleSubmit que utiliza esos valores en su cuerpo:
 
-function Entity({ id, cash }) {
-  const handleSubmit = () => {
-    updateEntityCash(id, cash).then((res) => {
-      console.log(res);
-    });
-  };
 
-  return (
-    <div>
-      <p>ID: {id}</p>
-      <p>Cash: {cash}</p>
-      <button onClick={handleSubmit}>Actualizar</button>
-    </div>
-  );
-}
+//Ejemplo2.js
 
 
 
@@ -48,9 +29,10 @@ En este caso, la función handleSubmit es un closure, ya que utiliza los valores
 Recursos adicionales
 Aquí hay algunos recursos adicionales sobre closures en JavaScript y React:
 
-MDN Web Docs - Closure
-W3Schools - JavaScript Closures
-React Docs - Handling Events
+https://legacy.reactjs.org/docs/handling-events.html
+[W3Schools - JavaScript Closures](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures)
+[React Docs - Handling Events](https://www.w3schools.com/js/js_function_closures.asp)
+
 Preguntas frecuentes
 ¿Qué es un closure en JavaScript?
 
